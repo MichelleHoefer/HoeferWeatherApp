@@ -6,22 +6,22 @@ function updateWeather(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind-speed");
   let timeElement = document.querySelector("#time");
-  let date = new Date(response.data.time * 1000);
-  //let iconElement = document.querySelector("#icon");
+  let now = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
   console.log(response.data);
 
   cityElement.innerHTML = response.data.city;
-  timeElement.innerHTML = formatDate(date);
+  timeElement.innerHTML = formatDate(now);
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   descriptionElement.innerHTML = response.data.condition.description;
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
-  //iconElement.innerHTML = response.data.condition.icon;
+  iconElement.innerHTML = ` <img src= "${response.data.condition.icon_url}" class="weather-app-icon"/>`;
   temperatureElement.innerHTML = Math.round(temperature);
 }
 
-function formatDate(date) {
-  let minutes = date.getMinutes();
-  let hours = date.getHours();
+function formatDate(now) {
+  let minutes = now.getMinutes();
+  let hours = now.getHours();
   let days = [
     "Sunday",
     "Monday",
@@ -31,7 +31,7 @@ function formatDate(date) {
     "Friday",
     "Saturday",
   ];
-  let day = days[date.getDay()];
+  let day = days[now.getDay()];
 
   if (minutes < 10) {
     minutes = `0${minutes}`;
