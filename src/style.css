@@ -35,22 +35,24 @@
 }
 
 body {
-  background-color: #f9f7fe;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/164/392/original/pexels-takakatsuhonda-31782382.jpg?1745932833");
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: "Sansation", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .weather-app {
-  background-color: white;
-  max-width: 600px;
+  background-color: pink;
+  max-width: 60%;
   margin: 30px auto;
   padding: 30px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   border-radius: 16px;
 }
 a {
-  color: blueviolet;
+  color: darkmagenta;
 }
 
 header {
@@ -92,11 +94,11 @@ main {
 .weather-app-details {
   font-size: 16px;
   line-height: 24px;
-  color: rgba(39, 33, 66, 0.4);
+  color: rgba(39, 33, 66, 0.6);
   font-weight: 400;
 }
 .weather-app-details strong {
-  color: #f65282;
+  color: darkorchid;
 }
 
 .weather-app-temperature-container {
@@ -124,7 +126,7 @@ main {
 }
 .weather-forecast-date {
   text-align: center;
-  color: rgba(39, 33, 66, 0.4);
+  color: rgba(39, 33, 66, 0.6);
   font-size: 16px;
   line-height: 20px;
   margin-bottom: 10px;
@@ -134,11 +136,10 @@ main {
   height: 88px;
   display: block;
   margin: 0 auto;
-  max-width: 90%;
 }
 .weather-forecast-temperatures {
   text-align: center;
-  color: #f65282;
+  color: darkorchid;
   margin-top: 10px;
   display: flex;
   justify-content: center;
@@ -151,5 +152,4 @@ footer {
   padding: 30px 0 0 0;
   text-align: center;
   font-size: 13px;
-  font-weight: lighter;
 }
